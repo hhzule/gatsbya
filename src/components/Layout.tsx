@@ -1,16 +1,18 @@
 import React, { ReactNode } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
+
 type Props = {
   children: ReactNode;
-  title: string;
 };
 
-const Layout = ({ children, title }: Props) => {
+const Layout = ({ children }: Props) => {
   return (
     <div>
       <h1>site layout</h1>
-      <Header title={title} />
+      <Header />
       {children}
+      <Footer />
     </div>
   );
 };

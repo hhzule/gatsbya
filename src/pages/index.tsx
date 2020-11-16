@@ -1,22 +1,28 @@
 import { navigate } from "gatsby";
 import React from "react";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 import { graphql } from "gatsby";
+import Display from "../components/Display";
 
 const index = ({ data }) => {
   return (
     <div>
-      <Header title="from index" />
-      hello
-      <button
-        onClick={() => {
-          navigate("/about");
-        }}
-      >
-        go to about
-      </button>
-      <br />
-      <span>{data.allContentfulBlogPost.edges[0].node.title}</span>
+      <Layout>
+        hello
+        <br />
+        {data.allContentfulBlogPost.edges.map((node, i) => {
+          return (
+            <div key={i}>
+              <Display
+                title={node.node.title}
+                content={node.node.content.raw}
+                timestamp={node.node.timestamp}
+                pic={node.node.image.file.url}
+              />
+            </div>
+          );
+        })}
+      </Layout>
     </div>
   );
 };
@@ -29,6 +35,12 @@ export const query = graphql`
       edges {
         node {
           title
+          timestamp
+          image {
+            file {
+              url
+            }
+          }
           content {
             raw
           }
