@@ -7,10 +7,6 @@
   Minimal starter for installing recipes
 </h1>
 
-Note that this starter does not include any pages by default.
-
-This starter is meant as a minimal reproduction of a Gatsby project in order to facilitate recipe installation.
-
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
@@ -22,15 +18,14 @@ This starter is meant as a minimal reproduction of a Gatsby project in order to 
     gatsby new my-site https://github.com/gatsbyjs/gatsby-starter-minimal
     ```
 
-2.  **Start developing.**
+content space ID
+7gnloOLCPoTtzL7BOYXAp3
 
-    Navigate into your new site’s directory and start it up.
+blog space ID
+7vrkvphkfpmm
 
-    ```shell
-    cd my-site/
-    gatsby develop
-    ```
+Content Delivery API - access token
+zGz2Rj2g9sa8YMv_9Y2advBv2lSoBL19kaByd90RJsM
 
-3.  **Open the code and start customizing!**
-
-    Your site is now running at `http://localhost:8000`!
+Content Preview API - access token
+Gro2I_kxdSZX-Qao9T4S6p_Yf3h3X_exKl68yfCO9NQ
