@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.js"],"names":["sorry"],"mappings":"2FAAA,gCAUeA,UARD,WACV,OACI","file":"component---src-pages-404-js-4bec64cffea1776b0e3b.js","sourcesContent":["import React from 'react'\n\nconst sorry = () => {\n    return (\n        <div>\n            sorry page not\n        </div>\n    )\n}\n\nexport default sorry \n"],"sourceRoot":""}
