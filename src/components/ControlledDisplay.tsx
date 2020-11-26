@@ -1,11 +1,11 @@
 import React from "react";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
-
+import { Link } from "gatsby";
 const ControlledDisplay = ({ data }) => {
   // console.log(data.allContentfulBlogPost.edges[0].node.content.raw, "data");
   return (
-    <div className="post-item">
+    <div className="post-item-main">
       {data.allContentfulBlogPost.edges.map((node, i) => {
         return (
           <div key={i}>
@@ -23,8 +23,7 @@ const ControlledDisplay = ({ data }) => {
               <div className="datestamp">{node.timestamp}</div>
             </div>
 
-            {/* <Link to={`/post/${node.node.title}`}>View full post</Link>
-             */}
+            <Link to={`/login`}>View full post</Link>
           </div>
         );
       })}

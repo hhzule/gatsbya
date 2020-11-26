@@ -1,6 +1,7 @@
 import { FirebaseContext } from "../service";
 import React from "react";
 import { navigate } from "gatsby";
+import userdudeicon from "../pages/user-alt-512.webp";
 
 const Login: React.FC = () => {
   const { firebase, authToken, setAuthToken } = React.useContext(
@@ -57,33 +58,37 @@ const Login: React.FC = () => {
   }, [authToken]);
   return (
     <>
-      <form style={{ display: "flex", flexDirection: "column" }}>
-        <label htmlFor="email">Email address</label>
-        <input
-          id="email"
-          aria-describedby="email-helper"
-          value={email}
-          onChange={(event) => setEmail(event.currentTarget.value)}
-        />
-
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          value={password}
-          onChange={(event) => setPassword(event.currentTarget.value)}
-        />
-
-        <button
-          type="submit"
-          style={{ marginTop: "10px" }}
-          onClick={handleSignupAndLogin}
-        >
-          Login / Sign Up
-        </button>
-        {/* <button style={{ marginTop: "10px" }} onClick={handleGoogleAuth}>
+      <div className="login-page-main">
+        <div className="login-page-primary">
+          <img src={userdudeicon} alt="user icon" />
+          <form style={{ display: "flex", flexDirection: "column" }}>
+            <input
+              placeholder="Email"
+              id="email"
+              aria-describedby="email-helper"
+              value={email}
+              onChange={(event) => setEmail(event.currentTarget.value)}
+            />
+            <input
+              placeholder="Password"
+              id="password"
+              value={password}
+              onChange={(event) => setPassword(event.currentTarget.value)}
+            />
+            login
+            <button
+              type="submit"
+              style={{ marginTop: "10px" }}
+              onClick={handleSignupAndLogin}
+            >
+              Login / Sign Up
+            </button>
+            {/* <button style={{ marginTop: "10px" }} onClick={handleGoogleAuth}>
           Login With Google
         </button> */}
-      </form>
+          </form>
+        </div>
+      </div>
     </>
   );
 };

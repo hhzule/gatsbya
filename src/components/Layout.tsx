@@ -9,7 +9,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
   console.log("layout running");
   return (
-    <div>
+    <div className="layout">
       <FirebaseProvider>
         <Header />
         {children}

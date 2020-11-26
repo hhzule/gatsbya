@@ -7,7 +7,7 @@ interface PrivateRouteProps {
 }
 const PrivateRoute: React.FC<PrivateRouteProps> = (props) => {
   const { authToken } = React.useContext(FirebaseContext);
-  console.log(authToken, "pr");
+  // console.log(authToken, "pr");
   if (!authToken) {
     return <ControlledDisplay data={props.data} />;
   }

@@ -4,9 +4,11 @@ import Login from "../components/Login";
 
 const LoginPage = () => {
   return (
-    <Layout>
-      <Login />
-    </Layout>
+    <div className="login-page-div">
+      <Layout>
+        <Login />
+      </Layout>
+    </div>
   );
 };
 export default LoginPage;
